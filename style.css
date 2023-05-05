@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+
+  --color-BG: rgb(255, 255, 255);
+  --color-allElements: rgba(50, 50, 56, 1);
+  --color-soundButtonsBG: rgba(225, 225, 230, 1);
+  --color-soundButtonBGhover: rgba(2, 121, 157, 1);
+  --color-soundButtonSVGonHover: white;
+
+  --size-hourText: 126.166px;
+}
+
+body.darkMode {
+  --color-BG: rgba(18, 18, 20, 1);
+  --color-allElements: rgba(255, 255, 255, 1);
+  --color-soundButtonsBG: rgba(41, 41, 46, 1);
+  --color-soundButtonBGhover: rgba(10, 52, 66, 1);
+  --color-soundButtonSVGonHover: rgba(255, 255, 255, 1);
+}
+
+.sounds .on {
+  background: var(--color-soundButtonBGhover);
+}
+
+.sounds .on svg path {
+  fill: var(--color-soundButtonSVGonHover);
+}
+
+.hide {
+  display: none;
+}
+
+body * {
+  color: var(--color-allElements);
+}
+
+svg path {
+  fill: var(--color-allElements);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+  transition: transform 1000ms;
+}
+
+body {
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.app {
+  background-color: var(--color-BG);
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+}
+
+.app > button {
+  position: absolute;
+  right: 6.4rem;
+  top: 6.4rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 19.2rem;
+}
+
+.timer {
+  display: grid;
+  gap: 4.8rem;
+}
+
+.clock {
+  display: flex;
+  font-size: var(--size-hourText);
+  line-height: 14.8rem;
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+  justify-self: center;
+}
+
+.sounds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.sounds button {
+  display: grid;
+  gap: 3.2rem;
+
+  background-color: var(--color-soundButtonsBG);
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+}
+
+.sounds button svg {
+  justify-self: center;
+}
+
+input[type="range"] {
+  justify-self: center;
+  appearance: none;
+  border-radius: 0.5rem;
+  background-color: rgba(50, 50, 56, 1);
+  height: 0.4rem;
+  width: 80%;
+}
+
+input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: rgba(50, 50, 56, 1);
+}
+
+.sounds button:hover,
+svg path {
+  transition: transform 1000ms, background 1000ms;
+  background-color: var(--color-soundButtonBGhover);
+}
+
+.sounds button:hover svg path {
+  fill: var(--color-soundButtonSVGonHover);
+}
