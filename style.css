@@ -65,7 +65,6 @@ body {
   font-size: 1.6rem;
   position: relative;
 }
-
 .app {
   background-color: var(--color-BG);
   min-height: 100vh;
