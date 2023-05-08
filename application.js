@@ -1,23 +1,35 @@
 //PARTE DOS SONS
 
-//BOTÕES DE SONS
+// DOM dos botões
 const forestButton = document.querySelector(".forest")
 const rainButton = document.querySelector(".rain")
-const coffeShopButton = document.querySelector(".coffeShop")
+const coffeeShopButton = document.querySelector(".coffeeShop")
 const fireplaceButton = document.querySelector(".fireplace")
 
-//AUDIOS
+// DOM do botão de input range para volume
+const forestVolumeInput = document.querySelector("#forestInput")
+const rainVolumeInput = document.querySelector("#rainInput")
+const coffeeShopVolumeInput = document.querySelector("#coffeeShopInput")
+const fireplaceVolumeInput = document.querySelector("#fireplaceInput")
+
+// DOM dos áudios
 const forestSound = document.querySelector(".forestAudio")
 const rainSound = document.querySelector(".rainAudio")
-const coffeShopSound = document.querySelector(".coffeShopAudio")
+const coffeeShopSound = document.querySelector(".coffeeShopAudio")
 const fireplaceSound = document.querySelector(".fireplaceAudio")
 
-//EVENTOS
+// eventos
 forestButton.addEventListener("click", startForestSound)
 rainButton.addEventListener("click", startRainSound)
-coffeShopButton.addEventListener("click", startCoffeShopSound)
+coffeeShopButton.addEventListener("click", startCoffeeShopSound)
 fireplaceButton.addEventListener("click", startFireplaceSound)
 
+forestVolumeInput.addEventListener("input", changeForestAudioVolume)
+rainVolumeInput.addEventListener("input", changeRainAudioVolume)
+coffeeShopVolumeInput.addEventListener("input", changeCoffeeShopAudioVolume)
+fireplaceVolumeInput.addEventListener("input", changeFireplaceAudioVolume)
+
+// funções
 function startForestSound() {
   if (forestButton.classList.contains("on")) {
     forestButton.classList.remove("on")
@@ -25,6 +37,7 @@ function startForestSound() {
   } else {
     forestButton.classList.add("on")
     forestSound.play()
+    changeForestAudioVolume()
   }
   forestSound.loop = true
 }
@@ -36,19 +49,21 @@ function startRainSound() {
   } else {
     rainButton.classList.add("on")
     rainSound.play()
+    changeRainAudioVolume()
   }
   rainSound.loop = true
 }
 
-function startCoffeShopSound() {
-  if (coffeShopButton.classList.contains("on")) {
-    coffeShopButton.classList.remove("on")
-    coffeShopSound.pause()
+function startCoffeeShopSound() {
+  if (coffeeShopButton.classList.contains("on")) {
+    coffeeShopButton.classList.remove("on")
+    coffeeShopSound.pause()
   } else {
-    coffeShopButton.classList.add("on")
-    coffeShopSound.play()
+    coffeeShopButton.classList.add("on")
+    coffeeShopSound.play()
+    changeCoffeeShopAudioVolume()
   }
-  coffeShopSound.loop = true
+  coffeeShopSound.loop = true
 }
 
 function startFireplaceSound() {
@@ -58,12 +73,25 @@ function startFireplaceSound() {
   } else {
     fireplaceButton.classList.add("on")
     fireplaceSound.play()
+    changeFireplaceAudioVolume()
   }
   fireplaceSound.loop = true
 }
 
-var controlVolume = function () {
-  rainSound.volume = document.getElementById("#rainInput").value
+function changeForestAudioVolume() {
+  forestSound.volume = forestVolumeInput.value
+}
+
+function changeRainAudioVolume() {
+  rainSound.volume = rainVolumeInput.value
+}
+
+function changeCoffeeShopAudioVolume() {
+  coffeeShopSound.volume = coffeeShopVolumeInput.value
+}
+
+function changeFireplaceAudioVolume() {
+  fireplaceSound.volume = fireplaceVolumeInput.value
 }
 
 //
