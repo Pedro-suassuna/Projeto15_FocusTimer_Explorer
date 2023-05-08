@@ -82,6 +82,11 @@ header {
   margin: 6rem 6rem 0 0;
 }
 
+header svg {
+  width: 5.4rem;
+  height: 5.4rem;
+}
+
 main {
   display: flex;
   align-items: center;
