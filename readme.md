@@ -24,7 +24,7 @@ O Pomodoro perfeito para seus momentos de concentração! ⏰🧘🏽‍♂️
 </br>
 
 <p align = "center">
-<img src="https://i.imgur.com/NgeQJVV.png"/>
+<img src="https://i.imgur.com/0Smq3WE.png"/>
 </p>
 
 <br>
