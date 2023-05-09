@@ -48,7 +48,7 @@ O Pomodoro perfeito para seus momentos de concentração! ⏰🧘🏽‍♂️
 
 ## 🎯 Objetivo
 
-> Realizar a construção de um página que contém um temporizador com opções play/stop e acréscimo/descréscimo de 5 minutos no tempo desejado. Além disso ainda consta com 4 diferentes sons de ambiente para melhorar a concentração, sendo possível até ajustar seus volumes.
+> Realizar a construção de um página que contém um temporizador com opções play/stop e acréscimo/decréscimo de 5 minutos no tempo desejado. Além disso ainda consta com 4 diferentes sons de ambiente para melhorar a concentração, sendo possível até ajustar seus volumes.
 
 <br>
 
